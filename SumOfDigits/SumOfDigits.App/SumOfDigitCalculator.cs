@@ -6,7 +6,25 @@ namespace SumOfDigits.App
     {
         public int DigitalRoot(long n)
         {
-            throw new NotImplementedException();
+            char[] arrayOfNumbers = n.ToString().ToCharArray();
+            long sum = 0;
+
+            if (arrayOfNumbers.Length > 1)
+            {
+                foreach (var number in arrayOfNumbers)
+                {
+                    double value = Char.GetNumericValue(number);
+                    sum += Convert.ToInt32(value);
+                }
+
+                return DigitalRoot(sum);
+            }
+            else
+            {
+                sum = n;
+                return Convert.ToInt32(sum);
+            }
         }
+
     }
 }
