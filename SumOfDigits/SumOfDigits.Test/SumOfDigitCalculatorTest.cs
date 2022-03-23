@@ -1,3 +1,4 @@
+using SumOfDigits.App;
 using Xunit;
 
 namespace SumOfDigits.Test
@@ -14,7 +15,7 @@ namespace SumOfDigits.Test
             ISumOfDigitCalculator digitCalculator = new SumOfDigitCalculator();
 
             //Act
-            var actual = digitCalculator.DigitRoot(n);
+            var actual = digitCalculator.DigitalRoot(n);
 
             //Assert
             Assert.Equal(expected, actual);
